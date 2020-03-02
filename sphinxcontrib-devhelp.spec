@@ -5,18 +5,22 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : sphinxcontrib-devhelp
-Version  : 1.0.1
-Release  : 8
-URL      : https://files.pythonhosted.org/packages/57/5f/bf9a0f7454df68a7a29033a5cf8d53d0797ae2e426b1b419e4622726ec7d/sphinxcontrib-devhelp-1.0.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/57/5f/bf9a0f7454df68a7a29033a5cf8d53d0797ae2e426b1b419e4622726ec7d/sphinxcontrib-devhelp-1.0.1.tar.gz
-Source1  : https://files.pythonhosted.org/packages/57/5f/bf9a0f7454df68a7a29033a5cf8d53d0797ae2e426b1b419e4622726ec7d/sphinxcontrib-devhelp-1.0.1.tar.gz.asc
-Summary  : No summary provided
+Version  : 1.0.2
+Release  : 9
+URL      : https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz
+Source1  : https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz.asc
+Summary  : sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document.
 Group    : Development/Tools
 License  : BSD-2-Clause
 Requires: sphinxcontrib-devhelp-license = %{version}-%{release}
 Requires: sphinxcontrib-devhelp-python = %{version}-%{release}
 Requires: sphinxcontrib-devhelp-python3 = %{version}-%{release}
+Requires: flake8
+Requires: mypy
 BuildRequires : buildreq-distutils3
+BuildRequires : flake8
+BuildRequires : mypy
 BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pytest
@@ -25,36 +29,6 @@ BuildRequires : virtualenv
 
 %description
 sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document.
-
-Home-page: http://sphinx-doc.org/
-Author: Georg Brandl
-Author-email: georg@python.org
-License: BSD
-Download-URL: https://pypi.org/project/sphinxcontrib-devhelp/
-Description: 
-        sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document.
-        
-Platform: any
-Classifier: Development Status :: 5 - Production/Stable
-Classifier: Environment :: Console
-Classifier: Environment :: Web Environment
-Classifier: Intended Audience :: Developers
-Classifier: Intended Audience :: Education
-Classifier: License :: OSI Approved :: BSD License
-Classifier: Operating System :: OS Independent
-Classifier: Programming Language :: Python
-Classifier: Programming Language :: Python :: 3
-Classifier: Programming Language :: Python :: 3.5
-Classifier: Programming Language :: Python :: 3.6
-Classifier: Programming Language :: Python :: 3.7
-Classifier: Framework :: Sphinx
-Classifier: Framework :: Sphinx :: Extension
-Classifier: Topic :: Documentation
-Classifier: Topic :: Documentation :: Sphinx
-Classifier: Topic :: Text Processing
-Classifier: Topic :: Utilities
-Requires-Python: >=3.5
-Provides-Extra: test
 
 %package license
 Summary: license components for the sphinxcontrib-devhelp package.
@@ -84,15 +58,15 @@ python3 components for the sphinxcontrib-devhelp package.
 
 
 %prep
-%setup -q -n sphinxcontrib-devhelp-1.0.1
-cd %{_builddir}/sphinxcontrib-devhelp-1.0.1
+%setup -q -n sphinxcontrib-devhelp-1.0.2
+cd %{_builddir}/sphinxcontrib-devhelp-1.0.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582919859
+export SOURCE_DATE_EPOCH=1583170452
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
@@ -106,7 +80,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/sphinxcontrib-devhelp
-cp %{_builddir}/sphinxcontrib-devhelp-1.0.1/LICENSE %{buildroot}/usr/share/package-licenses/sphinxcontrib-devhelp/7ff1f231e0b27a80eb835961e888560c43a649ca
+cp %{_builddir}/sphinxcontrib-devhelp-1.0.2/LICENSE %{buildroot}/usr/share/package-licenses/sphinxcontrib-devhelp/7ff1f231e0b27a80eb835961e888560c43a649ca
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
