@@ -6,7 +6,7 @@
 #
 Name     : sphinxcontrib-devhelp
 Version  : 1.0.2
-Release  : 9
+Release  : 10
 URL      : https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz
 Source1  : https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz.asc
@@ -51,7 +51,7 @@ python components for the sphinxcontrib-devhelp package.
 Summary: python3 components for the sphinxcontrib-devhelp package.
 Group: Default
 Requires: python3-core
-Provides: pypi(sphinxcontrib-devhelp)
+Provides: pypi(sphinxcontrib_devhelp)
 
 %description python3
 python3 components for the sphinxcontrib-devhelp package.
@@ -66,8 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583170452
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583452230
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
