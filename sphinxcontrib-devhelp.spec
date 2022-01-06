@@ -6,7 +6,7 @@
 #
 Name     : sphinxcontrib-devhelp
 Version  : 1.0.2
-Release  : 25
+Release  : 26
 URL      : https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz
 Source1  : https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz.asc
@@ -16,16 +16,12 @@ License  : BSD-2-Clause
 Requires: sphinxcontrib-devhelp-license = %{version}-%{release}
 Requires: sphinxcontrib-devhelp-python = %{version}-%{release}
 Requires: sphinxcontrib-devhelp-python3 = %{version}-%{release}
-Requires: flake8
-Requires: mypy
 BuildRequires : buildreq-distutils3
-BuildRequires : flake8
-BuildRequires : mypy
-BuildRequires : pluggy
-BuildRequires : py-python
-BuildRequires : pytest
-BuildRequires : tox
-BuildRequires : virtualenv
+BuildRequires : pypi(pluggy)
+BuildRequires : pypi(py)
+BuildRequires : pypi(pytest)
+BuildRequires : pypi(tox)
+BuildRequires : pypi(virtualenv)
 
 %description
 sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document.
@@ -66,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1603404774
+export SOURCE_DATE_EPOCH=1641428767
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
