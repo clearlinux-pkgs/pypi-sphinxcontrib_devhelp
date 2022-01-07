@@ -4,53 +4,53 @@
 #
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
-Name     : sphinxcontrib-devhelp
+Name     : pypi-sphinxcontrib_devhelp
 Version  : 1.0.2
-Release  : 26
+Release  : 27
 URL      : https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz
 Source1  : https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz.asc
 Summary  : sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document.
 Group    : Development/Tools
 License  : BSD-2-Clause
-Requires: sphinxcontrib-devhelp-license = %{version}-%{release}
-Requires: sphinxcontrib-devhelp-python = %{version}-%{release}
-Requires: sphinxcontrib-devhelp-python3 = %{version}-%{release}
+Requires: pypi-sphinxcontrib_devhelp-license = %{version}-%{release}
+Requires: pypi-sphinxcontrib_devhelp-python = %{version}-%{release}
+Requires: pypi-sphinxcontrib_devhelp-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pypi(pluggy)
 BuildRequires : pypi(py)
-BuildRequires : pypi(pytest)
-BuildRequires : pypi(tox)
-BuildRequires : pypi(virtualenv)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 
 %description
 sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document.
 
 %package license
-Summary: license components for the sphinxcontrib-devhelp package.
+Summary: license components for the pypi-sphinxcontrib_devhelp package.
 Group: Default
 
 %description license
-license components for the sphinxcontrib-devhelp package.
+license components for the pypi-sphinxcontrib_devhelp package.
 
 
 %package python
-Summary: python components for the sphinxcontrib-devhelp package.
+Summary: python components for the pypi-sphinxcontrib_devhelp package.
 Group: Default
-Requires: sphinxcontrib-devhelp-python3 = %{version}-%{release}
+Requires: pypi-sphinxcontrib_devhelp-python3 = %{version}-%{release}
 
 %description python
-python components for the sphinxcontrib-devhelp package.
+python components for the pypi-sphinxcontrib_devhelp package.
 
 
 %package python3
-Summary: python3 components for the sphinxcontrib-devhelp package.
+Summary: python3 components for the pypi-sphinxcontrib_devhelp package.
 Group: Default
 Requires: python3-core
 Provides: pypi(sphinxcontrib_devhelp)
 
 %description python3
-python3 components for the sphinxcontrib-devhelp package.
+python3 components for the pypi-sphinxcontrib_devhelp package.
 
 
 %prep
@@ -62,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641428767
+export SOURCE_DATE_EPOCH=1641586754
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -74,8 +74,8 @@ python3 setup.py build
 %install
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/package-licenses/sphinxcontrib-devhelp
-cp %{_builddir}/sphinxcontrib-devhelp-1.0.2/LICENSE %{buildroot}/usr/share/package-licenses/sphinxcontrib-devhelp/7ff1f231e0b27a80eb835961e888560c43a649ca
+mkdir -p %{buildroot}/usr/share/package-licenses/pypi-sphinxcontrib_devhelp
+cp %{_builddir}/sphinxcontrib-devhelp-1.0.2/LICENSE %{buildroot}/usr/share/package-licenses/pypi-sphinxcontrib_devhelp/7ff1f231e0b27a80eb835961e888560c43a649ca
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -86,7 +86,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/sphinxcontrib-devhelp/7ff1f231e0b27a80eb835961e888560c43a649ca
+/usr/share/package-licenses/pypi-sphinxcontrib_devhelp/7ff1f231e0b27a80eb835961e888560c43a649ca
 
 %files python
 %defattr(-,root,root,-)
