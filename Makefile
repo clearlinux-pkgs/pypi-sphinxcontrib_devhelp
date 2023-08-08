@@ -1,5 +1,5 @@
 PKG_NAME := pypi-sphinxcontrib_devhelp
-URL = https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz
+URL = https://files.pythonhosted.org/packages/4e/f8/89ea346f98f51eab08b160b8cc95e13e71eb7f4bed74a70074fbd0c2f5e5/sphinxcontrib_devhelp-1.0.3.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
