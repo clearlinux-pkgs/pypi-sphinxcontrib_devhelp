@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-sphinxcontrib_devhelp
-Version  : 1.0.4
-Release  : 37
-URL      : https://files.pythonhosted.org/packages/52/14/35164e8fd79b8ec7f9570984ab4af38f2ec728084df7ddd3c4b045e6b63a/sphinxcontrib_devhelp-1.0.4.tar.gz
-Source0  : https://files.pythonhosted.org/packages/52/14/35164e8fd79b8ec7f9570984ab4af38f2ec728084df7ddd3c4b045e6b63a/sphinxcontrib_devhelp-1.0.4.tar.gz
+Version  : 1.0.5
+Release  : 38
+URL      : https://files.pythonhosted.org/packages/2e/f2/6425b6db37e7c2254ad661c90a871061a078beaddaf9f15a00ba9c3a1529/sphinxcontrib_devhelp-1.0.5.tar.gz
+Source0  : https://files.pythonhosted.org/packages/2e/f2/6425b6db37e7c2254ad661c90a871061a078beaddaf9f15a00ba9c3a1529/sphinxcontrib_devhelp-1.0.5.tar.gz
 Summary  : sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp documents
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -60,10 +60,10 @@ python3 components for the pypi-sphinxcontrib_devhelp package.
 
 
 %prep
-%setup -q -n sphinxcontrib_devhelp-1.0.4
-cd %{_builddir}/sphinxcontrib_devhelp-1.0.4
+%setup -q -n sphinxcontrib_devhelp-1.0.5
+cd %{_builddir}/sphinxcontrib_devhelp-1.0.5
 pushd ..
-cp -a sphinxcontrib_devhelp-1.0.4 buildavx2
+cp -a sphinxcontrib_devhelp-1.0.5 buildavx2
 popd
 
 %build
@@ -71,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1691679008
+export SOURCE_DATE_EPOCH=1692059663
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
