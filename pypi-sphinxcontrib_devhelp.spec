@@ -5,7 +5,7 @@
 #
 Name     : pypi-sphinxcontrib_devhelp
 Version  : 1.0.5
-Release  : 39
+Release  : 40
 URL      : https://files.pythonhosted.org/packages/2e/f2/6425b6db37e7c2254ad661c90a871061a078beaddaf9f15a00ba9c3a1529/sphinxcontrib_devhelp-1.0.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2e/f2/6425b6db37e7c2254ad661c90a871061a078beaddaf9f15a00ba9c3a1529/sphinxcontrib_devhelp-1.0.5.tar.gz
 Summary  : sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp documents
